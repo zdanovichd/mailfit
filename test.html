@@ -16,10 +16,15 @@
         }
         .banner {
             background-image: url('https://github.com/zdanovichd/mailfit/blob/main/img/banner1.png?raw=true');
+            width: 100%;
             min-height: 725px;
+            background-position: center;
             /* height: 100%; */
         }
         .email-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             max-width: 600px;
             margin: 0 auto;
             background-color: #ffffff;
@@ -40,12 +45,7 @@
         }
         .banner h1 {
             /* font-family: 'Circe', sans-serif; */
-            font-family: 'Circe Bold', sans-serif;
-            color: #000000;
-            /* font-weight: bold; */
-            font-size: 42px;
-            line-height: 40px;
-            text-align: center;
+            font-family: 'Circe Bold', sans-serif;color: #000000;font-size: 42px;line-height: 40px;text-align: center;
         }
         .discounts {
             display: flex;
@@ -64,38 +64,22 @@
         }
 
         .discount p {
-            color: #2E2E2E;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 16.1px;
-            text-align: center;
+            color: #2E2E2E;font-size: 14px;font-weight: 400;line-height: 16.1px;text-align: center;
 
         }
         .discount strong {
-            font-family: 'Circe Bold', sans-serif;
-            font-size: 40px;
-            line-height: 46.88px;
-            text-align: center;
+            font-family: 'Circe Bold', sans-serif;font-size: 40px;line-height: 46.88px;text-align: center;
 
         }
         .promo-box {
-            font-family: Arial;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 16.1px;
-            text-align: center;
+            font-family: Arial;font-size: 14px;font-weight: 400;line-height: 16.1px;text-align: center;
         }
         /*  */
         .promo-code {
             margin: 20px 0 24px;
         }
         .promo-code strong {
-            font-family: Arial;
-            font-size: 28px;
-            line-height: 32.2px;
-            text-align: center;
-            padding: 10.5px 19.5px 7.5px;
-            border: 1px dashed #000000
+            font-family: Arial;font-size: 28px;line-height: 32.2px;text-align: center;padding: 10.5px 19.5px 7.5px;border: 1px dashed #000000
         }
         .cta-button {
             text-align: center;
@@ -108,50 +92,45 @@
         }
         .cta-button a {
 
-            color: #ffffff;
-
-            text-decoration: none;
-            font-family: Arial;
-
-            font-size: 20px;
-            font-weight: 400;
-            line-height: 23px;
+            color: #ffffff;text-decoration: none;font-family: Arial;font-size: 20px;font-weight: 400;line-height: 23px;
             text-align: center;
             text-underline-position: from-font;
             text-decoration-skip-ink: none;
 
         }
         .wrapper {
-            padding: 50px 50px 25px;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            align-items: center;
+            max-width: 500px;
+            padding: 50px 20px 25px;
         }
         .content {
-            font-size: 18px;
-            color: #000000;
-            line-height: 28px;
-            font-weight: 400;
+            font-size: 18px;color: #000000;line-height: 28px;font-weight: 400;
             /* padding: 0 20px; */
         }
 
         .content a {
-            color: #476FC6;
-            text-decoration: underline;
+            color: #476FC6;text-decoration: underline;
         }
 
         .product-categories {
             display: flex;
             justify-content: space-between;
+            flex-direction: row;
             flex-wrap: wrap;
-            /* padding: 20px; */
+            width: 100%;
+
         }
         .product-categories a {
-            color: #476FC6;
+
             text-align: center;
-            width: 30%;
+            max-width: 150px;
             margin-bottom: 60px;
-            font-size: 16px;
-            line-height: 20px;
-            font-weight: 700;
-            text-decoration: underline;
+            color: #476FC6;font-size: 16px;line-height: 20px;font-weight: 700;text-decoration: underline;
         }
         .product-categories img {
             max-width: 100%;
@@ -159,20 +138,11 @@
             margin-bottom: 20px;
         }
         .bottom {
-            font-family: 'Helvetica Neue', sans-serif;
-            font-weight: 300;
-            font-size: 14px;
-            line-height: 20px;
-            text-align: center;
-            color: #c4c4c4;
+            font-family: 'Helvetica Neue', sans-serif;font-weight: 300;font-size: 14px;line-height: 20px;text-align: center;color: #c4c4c4;
 
         }
         .footer {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-            font-size: 12px;
-            color: #777;
+            max-width: 600px;margin: 0 auto;text-align: center;font-size: 12px;color: #777777;
             /* padding: 20px; */
         }
         .footer p a {
@@ -182,7 +152,16 @@
             justify-items: center;
             color: #A3A3A3;
             text-decoration: none;
+
+        }
+        .footer__content a {
+            margin: 0;
+        }
+        .footer__bottom a {
             margin: 25px 26px 0;
+        }
+        .footer__link {
+            color: #A3A3A3;
         }
         .footer p {
             font-family: Arial;
@@ -202,57 +181,40 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+
             margin: 30px 0;
+        }
+        .social-icons, .number {
+            margin: 10px 25px;
         }
         .social-icons {
             display: inline-block;
-            margin-right: 50px;
         }
         .social-icons .icon {
-            width: 26px;
-            height: 26px;
-            float: left;
-            background: url('https://github.com/zdanovichd/mailfit/blob/main/img/social.png?raw=true') no-repeat;
-            margin: 0 10px;
+            width: 26px;height: 26px;float: left;background: url('https://github.com/zdanovichd/mailfit/blob/main/img/social.png?raw=true') no-repeat;margin: 0 10px;
         }
         .icon.vk {
-            display: block;
-            background-position: 0 0;
-            cursor: pointer;
+            display: block;background-position: 0 0;cursor: pointer;
         }
         .icon.facebook {
-            display: block;
-            background-position: -46px 1px;
-            cursor: pointer;
+            display: block;background-position: -46px 1px;cursor: pointer;
         }
         .icon.twitter {
-            display: block;
-            background-position: -91px 1px;
-            cursor: pointer;
+            display: block;background-position: -91px 1px;cursor: pointer;
         }
         .icon.instagram {
-            display: block;
-            background-position: -137px 1px;
-            cursor: pointer;
+            display: block;background-position: -137px 1px;cursor: pointer;
         }
         .icon.youtube {
-            display: block;
-            background-position: -184px 1px;
-            cursor: pointer;
+            display: block;background-position: -184px 1px;cursor: pointer;
         }
         .icon.ok {
-            display: block;
-            background-position: -225px 1px;
-            cursor: pointer;
+            display: block;background-position: -225px 1px;cursor: pointer;
         }
         .number {
-            display: inline-block;
-            font-family: Arial;
-            font-size: 17px;
-            font-weight: 400;
-            line-height: 27px;
-            color: #2ABE80;
-            text-decoration: none;
+            display: inline-block;font-family: Arial;font-size: 17px;font-weight: 400;line-height: 27px;color: #2ABE80;text-decoration: none;
         }
     </style>
 </head>
@@ -282,7 +244,6 @@
 
             <div class="promo-box">
                 <p>Промокод</p>
-                <!-- <br> -->
                 <p class="promo-code"><strong>GOODBYELETO</strong></p>
             </div>
 
@@ -294,7 +255,7 @@
             <div class="content">
                 <p>Здравствуйте!</p>
                 <p>Теперь, когда вы готовы к школе и обновили спальни своих малышей, пришла пора подумать о себе. Возможно, настало время поменять подушку или вы давно собирались купить <a href="#">шерстяное одеяло</a> на тот период, когда по ночам уже холодает, а отопление ещё не включили.</p>
-                <p>В конце концов, порадуйте себя новым комплектом <a href="#">мягкого постельного белья</a> или красивым <a href="#">уютным пледом</a>! Но торопитесь, <strong>скидка 10%</strong> на все эти радости будет действовать только <strong>до 13:00</strong>.</p>
+                <p>В конце концов, порадуйте себя новым комплектом <a href="#">мягкого постельного белья</a> или красивым <a href="#">уютным пледом</a>!<br> Но торопитесь, <strong>скидка 10%</strong> на все эти радости будет действовать только <strong>до 13:00</strong>.</p>
             </div>
 
             <div class="product-categories">
@@ -346,8 +307,8 @@
             </div>
             <a href="tel:88005556055" class="number">8 800 555 60 55</a>
         </div>
-        <p>Данное письмо было отправлено на halfzova.i@gmail.com. Пожалуйста, добавьте mailer@spim.ru в вашу адресную книгу, чтобы наши письма не попадали в спам.</p>
-        <p><a href="#"><img src="https://github.com/zdanovichd/mailfit/blob/main/img/unsubscribe1.png?raw=true">Отписаться</a><a href="#"><img src="https://github.com/zdanovichd/mailfit/blob/main/img/web1.png?raw=true">Веб-версия</a></p>
+        <p class="footer__content">Данное письмо было отправлено на <a rel="nofollow" href="#">halfzova.i@gmail.com</a>. Пожалуйста, добавьте <a rel="nofollow" href="#">mailer@spim.ru</a> в вашу адресную книгу, чтобы наши письма не попадали в спам.</p>
+        <p class="footer__bottom"><span class="footer__link"><a href="#"><img src="https://github.com/zdanovichd/mailfit/blob/main/img/unsubscribe1.png?raw=true">Отписаться</a></span><span class="footer__link"><a href="#"><img src="https://github.com/zdanovichd/mailfit/blob/main/img/web1.png?raw=true">Веб-версия</a></span></p>
     </div>
 </body>
 </html>
